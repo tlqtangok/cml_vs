@@ -10,7 +10,7 @@ VS IDE is too complicated that it automately creating so many things, behind the
 so, base on vs2022, I strip out all the complicated shell. Just leave its kernel. to show it by simply use command line.
 this can works togather with IDE's operation. So, just have fun, cheers, cml-ers :) !
 
-let's first assume our project working home is "cml_vs", which marked as ROOT 
+Assume our project's working home is "cml_vs", which marked as ROOT 
 
 # dll test
 ```

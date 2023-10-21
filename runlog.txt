@@ -1,0 +1,63 @@
+d:\ww\t\git\cml_vs>::__________________________________________________
+d:\ww\t\git\cml_vs>cd lib && create_lib.bat && cd ..\dll  && create_dll.bat && cd .. && clear_temp.bat
+d:\ww\t\git\cml_vs\lib>set FLAG_DEBUG=/Od /D _DEBUGd:\ww\t\git\cml_vs\lib>set FLAG_NODEBUG=/O2 /D "NDEBUG"d:\ww\t\git\cml_vs\lib>set VS_CL_OPT=/c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive-  /external:W3 /Gd /TP /FC /errorReport:prompt
+d:\ww\t\git\cml_vs\lib>set VS_LIB_OPT=/NOLOGO /MACHINE:X64
+d:\ww\t\git\cml_vs\lib>set VS_LINK_OPT=/ERRORREPORT:PROMPT  /INCREMENTAL /MANIFEST  /manifest:embed /DEBUG /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /MACHINE:X64 /MANIFESTUAC:"level='asInvoker' uiAccess='false'"
+d:\ww\t\git\cml_vs\lib>set INC=d:\ww\t\git\cml_vs\lib
+D:\ww\pro\vs2022\VC\Tools\MSVC\14.36.32530\bin\Hostx64\x64\cl.exe
+d:\ww\t\git\cml_vs\lib>del *.obj *.lib *.dll vc140.* mainapp.*
+d:\ww\t\git\cml_vs\lib>CL.exe  /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive-  /external:W3 /Gd /TP /FC /errorReport:prompt /I"d:\ww\t\git\cml_vs\lib" *.cpp ..\src\test.cpp
+a.cpp
+test.cpp
+正在生成代码...
+d:\ww\t\git\cml_vs\lib>lib.exe /NOLOGO /MACHINE:X64 /OUT:"mainapp.lib"  *.obj
+d:\ww\t\git\cml_vs\lib>link.exe /ERRORREPORT:PROMPT  /INCREMENTAL /MANIFEST  /manifest:embed /DEBUG /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /MACHINE:X64 /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /implib:"mainapp.lib" /out:"mainapp.exe"  test.obj mainapp.lib
+Microsoft (R) Incremental Linker Version 14.36.32530.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+d:\ww\t\git\cml_vs\lib>.\mainapp.exe
+9
+1
+45
+Hello World!
+
+d:\ww\t\git\cml_vs\dll>set FLAG_DEBUG=/Od /D _DEBUG
+d:\ww\t\git\cml_vs\dll>set FLAG_NODEBUG=/O2 /D "NDEBUG"
+d:\ww\t\git\cml_vs\dll>set VS_CL_OPT=/c /ZI /JMC /nologo /D "DEF_DLL_EXPORTS"  /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive-  /external:W3 /Gd /TP /FC /errorReport:prompt
+d:\ww\t\git\cml_vs\dll>set VS_LIB_OPT=/NOLOGO /MACHINE:X64
+d:\ww\t\git\cml_vs\dll>set VS_LINK_OPT=/ERRORREPORT:PROMPT  /INCREMENTAL /MANIFEST  /manifest:embed /DEBUG /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /MACHINE:X64 /MANIFESTUAC:"level='asInvoker' uiAccess='false'"
+d:\ww\t\git\cml_vs\dll>set INC=d:\ww\t\git\cml_vs\dll
+D:\ww\pro\vs2022\VC\Tools\MSVC\14.36.32530\bin\Hostx64\x64\cl.exe
+d:\ww\t\git\cml_vs\dll>del *.obj *.lib *.dll vc140.* mainapp.*
+找不到 d:\ww\t\git\cml_vs\dll\*.obj
+d:\ww\t\git\cml_vs\dll>CL.exe  /c /ZI /JMC /nologo /D "DEF_DLL_EXPORTS"  /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive-  /external:W3 /Gd /TP /FC /errorReport:prompt /I"d:\ww\t\git\cml_vs\dll" *.cpp
+a.cpp
+dllmain.cpp
+正在生成代码...
+d:\ww\t\git\cml_vs\dll>link.exe /ERRORREPORT:PROMPT  /INCREMENTAL /MANIFEST  /manifest:embed /DEBUG /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /MACHINE:X64 /MANIFESTUAC:"level='asInvoker' uiAccess='false'"  /out:"mainapp.dll"   /implib:"mainapp.lib"  /DLL  *.obj
+Microsoft (R) Incremental Linker Version 14.36.32530.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+  正在创建库 mainapp.lib 和对象 mainapp.exp
+d:\ww\t\git\cml_vs\dll>echo test dll ...
+test dll ...
+d:\ww\t\git\cml_vs\dll>set LIBPATH=d:\ww\t\git\cml_vs\dll
+d:\ww\t\git\cml_vs\dll>CL.exe  /c /ZI /JMC /nologo /D "DEF_DLL_EXPORTS"  /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive-  /external:W3 /Gd /TP /FC /errorReport:prompt /I"d:\ww\t\git\cml_vs\dll" ..\src\test.cpp
+test.cpp
+d:\ww\t\git\cml_vs\dll>link.exe /ERRORREPORT:PROMPT  /INCREMENTAL /MANIFEST  /manifest:embed /DEBUG /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /MACHINE:X64 /MANIFESTUAC:"level='asInvoker' uiAccess='false'"  /out:"mainapp.2.exe"   /LIBPATH:"d:\ww\t\git\cml_vs\dll" mainapp.lib test.obj
+Microsoft (R) Incremental Linker Version 14.36.32530.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+  正在创建库 mainapp.2.lib 和对象 mainapp.2.exp
+d:\ww\t\git\cml_vs\dll>.\mainapp.2.exe
+9
+1
+45
+Hello World!
+
+d:\ww\t\git\cml_vs>set ROOT=d:\ww\t\git\cml_vs
+d:\ww\t\git\cml_vs>cd d:\ww\t\git\cml_vs \lib
+d:\ww\t\git\cml_vs\lib>del *.obj *.lib *.dll vc140.* mainapp.*
+d:\ww\t\git\cml_vs\lib>cd d:\ww\t\git\cml_vs \dll
+d:\ww\t\git\cml_vs\dll>del *.obj *.lib *.dll vc140.* mainapp.*
+

@@ -1,4 +1,4 @@
-# readme
+# why I start cmd_vs project
 This "cmd_vs" project is an example project that show exactly what Visual Studio IDE's work behind: compiling, linking and so on, via just pure command line. If you like this, just star me! 
 
 includes :
@@ -10,6 +10,7 @@ VS IDE is too complicated that it automately creating so many things, behind the
 so, base on vs2022, I strip out all the complicated shell. Just leave its kernel. to show it by simply use command line.
 this can works togather with IDE's operation. So, just have fun, cheers, cml-ers :) !
 
+# how to run
 Assume our project's working home is "cml_vs", which marked as ROOT
 
 ## dll test

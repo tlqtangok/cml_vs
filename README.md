@@ -1,4 +1,4 @@
-# cml_dll
+# cml_vs
 This project is an example project that show exactly what Visual Studio IDE's work behind: compiling, linking and so on, via just pure command line. If you like this, just star me! 
 
 includes :

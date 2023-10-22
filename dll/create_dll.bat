@@ -9,7 +9,7 @@ set INC=%cd%
 where cl.exe 
 if not %errorlevel% equ 0 (
     echo "- please setup your vs2022 environment"
-    exit -1
+    exit /b -1
 )
 @echo on
 
